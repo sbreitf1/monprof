@@ -1,15 +1,15 @@
 package main
 
-type Config struct {
-	Profiles []Profile `json:"profiles"`
+type config struct {
+	Profiles []profile `json:"profiles"`
 }
 
-type Profile struct {
+type profile struct {
 	Name       string      `json:"name"`
-	Conditions []Condition `json:"conditions"`
+	Conditions []condition `json:"conditions"`
 	Commands   []string    `json:"cmds"`
 }
 
-type Condition struct {
+type condition struct {
 	Monitor string `json:"mon"`
 }
